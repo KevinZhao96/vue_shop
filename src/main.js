@@ -8,6 +8,11 @@ import axios from "axios";
 
 Vue.prototype.$http = axios;
 axios.defaults.baseURL = "https://lianghj.top:8888/api/private/v1/";
+axios.interceptors.request.use(config => {
+  config.headers.Authorization = window.sessionStorage.getItem('token')
+  // console.log(config);
+  return config;
+})
 
 Vue.config.productionTip = false;
 
