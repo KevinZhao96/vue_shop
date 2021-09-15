@@ -159,6 +159,7 @@
       title="分配角色"
       :visible.sync="setRoleDialogVisible"
       width="50%"
+      @close="setRoleDialogClosed"
     >
       <div>
         <p>当前的用户：{{ userInfo.username }}</p>
@@ -435,6 +436,11 @@ export default {
       this.$message.success("更新角色成功");
       this.getUserList();
       this.setRoleDialogVisible = false;
+    },
+    // 监听分配角色对话框关闭事件
+    setRoleDialogClosed() {
+      this.userInfo = {};
+      this.selectedRoleId = "";
     },
   },
 };

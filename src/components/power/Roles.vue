@@ -263,6 +263,7 @@ export default {
     // 编辑对话框关闭时重置
     eidtRoleDialogClosed() {
       this.editRoleDialogVisible = false;
+      this.$refs.editRoleRef.resetFields();
     },
     // 修改角色信息
     editrole() {
