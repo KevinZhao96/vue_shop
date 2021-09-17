@@ -97,7 +97,7 @@
     </el-card>
     <!-- 添加角色对话框 -->
     <el-dialog
-      title="添加用户"
+      title="添加角色"
       :visible.sync="addRoleDialogVisible"
       width="50%"
       @close="addRoleDialogClosed"
