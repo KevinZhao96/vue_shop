@@ -91,7 +91,6 @@ export default {
         return this.$message.error(res.meta.msg);
       }
       this.menulist = res.data;
-      // console.log(res);
     },
     // 改变是否缩放
     toggleCollapse() {
